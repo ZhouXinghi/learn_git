@@ -66,3 +66,9 @@ sudo update-alternatives --config x-terminal-emulator
 #	dwn
 sudo make clean innstall
 #	enter /etc/X11/xinit/xinitrc, add exec swn
+
+#	i3
+
+#	variety
+#	compton
+#	i3gaps
