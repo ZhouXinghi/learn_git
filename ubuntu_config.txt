@@ -1,0 +1,68 @@
+系统分区：
+boot	2G		primary
+/		30G		logical
+swap	8G		logical
+/home	rest	logical
+
+#分辨率
+cvt 1920 1080		
+#	打开开机启动配置，在/etc/profile下添加下面两行指令
+#	xrandr --newmode "1920x1080_60.00" 173.00 1920 2048 2248 2576 1080 1083 1088 1120 -hsync +vsync		（后面是上条指令的结果）
+#	xrandr --addmode Virtual-1 "1920x1080_60.00"
+#	然后重启
+sudo reboot
+#	在设置中选择1920*1080选项，成功
+#	也可以直接
+sudo apt update
+sudo apt install open-vm-tools
+
+
+#	设置共享文件夹
+
+
+
+
+#	中文输入法rime
+sudo apt install ibus-rime（安装rime输入法）
+sudo apt install librime-data-pinyin-simp （安装简体拼音库）
+重启系统， 使安装生效
+打开“setting（设置）”, “Region&Language（区域和语言）”，点+号, 添加输入法 Chinese(Rime) 。如果不用其它输入法，可以删除，其实也真不用其它输入法了.
+
+#	zsh
+
+#	terminator
+sudo apt install terminator
+
+#	latex
+sudo apt install texlive-full
+
+#	vscode
+下载包安装
+
+#	ananconda
+下载包安装
+
+#	htop
+sudo apt install htop
+
+#	共享文件夹消失
+sudo vmhgfs-fuse .host:/ /mnt/hgfs/ -o allow_other -o uid=1000
+
+#	删除vim-commen and vim-tiny
+sudo apt remove vim-commen
+sudo apt remove vim-tiny
+#	安装vim
+sudo apt install vim
+
+#	更改键盘键位映射
+https://www.bilibili.com/read/cv5156572
+注意KEYBOARD_KEY之前有空格，以及字母拼写
+
+#	set alacritty as default terminal
+sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/alacritty 50
+sudo update-alternatives --config x-terminal-emulator
+#	refer to https://gist.github.com/aanari/08ca93d84e57faad275c7f74a23975e6
+
+#	dwn
+sudo make clean innstall
+#	enter /etc/X11/xinit/xinitrc, add exec swn
