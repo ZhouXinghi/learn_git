@@ -29,9 +29,11 @@ sudo apt install librime-data-pinyin-simp （安装简体拼音库）
 打开“setting（设置）”, “Region&Language（区域和语言）”，点+号, 添加输入法 Chinese(Rime) 。如果不用其它输入法，可以删除，其实也真不用其它输入法了.
 
 #	zsh
+sudo apt install zsh
 
-#	terminator
-sudo apt install terminator
+
+#	alacritty
+sudo snap install alacritty --classic
 
 #	latex
 sudo apt install texlive-full
@@ -51,8 +53,15 @@ sudo vmhgfs-fuse .host:/ /mnt/hgfs/ -o allow_other -o uid=1000
 #	删除vim-commen and vim-tiny
 sudo apt remove vim-commen
 sudo apt remove vim-tiny
-#	安装vim
-sudo apt install vim
+#	安装neovim
+sudo apt install neovim
+#	install vim-plug
+#	github
+
+# 	install ranger
+sudo apt install ranger
+sudo apt install atool		" for compress and extrach python scirpt
+#	install a nerdfont (~/.local/share/fonts/...)
 
 #	更改键盘键位映射
 https://www.bilibili.com/read/cv5156572
@@ -63,12 +72,22 @@ sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emula
 sudo update-alternatives --config x-terminal-emulator
 #	refer to https://gist.github.com/aanari/08ca93d84e57faad275c7f74a23975e6
 
-#	dwn
-sudo make clean innstall
-#	enter /etc/X11/xinit/xinitrc, add exec swn
 
 #	i3
+sudo apt install i3
+# 	i3 environment:
+sudo apt install ibus-rime
+ibus-daemon -d
+#	install i3-gaps
+sudo add-apt-repository ppa:regolith-linux/release
+sudo apt update
+sudo apt install i3-gaps
+#	add these lines to i3/config
+for_window [class=".*"] border pixel 0
 
-#	variety
+gaps inner 15
+
+#	feh
+feh --bg-scale ~/Pictures/Wallpapers/wallhaven-o3jgep.jpg
+
 #	compton
-#	i3gaps
