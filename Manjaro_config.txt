@@ -1,0 +1,32 @@
+0. install git and add ssh-key
+
+
+
+
+1. install zsh
+
+sudo pacman -S zsh oh-my-zsh
+copy /usr/share/oh-my-zsh/zshrc to ~/.zshrc
+chsh -s /bin/zsh
+
+then install plugins you want:
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+2. install neovim
+
+sudo pacman -S neovim
+
+clone conf
+
+install vim-plug, then run nvim, :PlugInstall
+
+
+3. install ranger
+
+clone conf
+install devicon2
+git clone https://github.com/cdump/ranger-devicons2 ~/.config/ranger/plugins/devicons2
+
+install w3m(pacman)
